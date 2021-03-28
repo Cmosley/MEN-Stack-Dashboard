@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <%  %>
+            <% if (user) { %>
             <li class="nav-item">
               <a class="nav-link" href="#">Chat Room</a>
             </li>
@@ -31,11 +31,15 @@
             <li class="nav-item">
               <img id="avatarPhoto" height="50" src="<%= //user.avatar %>" alt="" />
             </li>
-            <%  %>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign In</a>
+              <a class="nav-link" href="/auth/logout">Log Out</a>
             </li>
-            <%    %>
+            <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/google">Sign In</a>
+            </li>
+            
+            <%  }  %>
           </ul>
         </div>
       </nav> 
