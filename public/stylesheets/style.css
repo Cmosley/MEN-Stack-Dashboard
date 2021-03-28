@@ -1,8 +1,99 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+:root {
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: transparent;
+--blue: #2c7be5;
+--indigo: #727cf5;
+--purple: #6b5eae;
+--pink: #ff679b;
+--red: #e63757;
+--orange: #fd7e14;
+--yellow: #f5803e;
+--green: #00d27a;
+--teal: #02a8b5;
+--cyan: #27bcfd;
+--white: #fff;
+--gray: #748194;
+--gray-dark: #4d5969;
+--primary: #2c7be5;
+--secondary: #748194;
+--success: #00d27a;
+--info: #27bcfd;
+--warning: #f5803e;
+--danger: #e63757;
+--light: #f9fafd;
+--dark: #0b1727;
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+--breakpoint-xxl: 1540px;
+--font-family-sans-serif: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+--font-family-monospace: "SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+font-family: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
-a {
-  color: #00B7FF;
+body{
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #edf2f9;
+text-align: left;
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+display: block;
 }
+
+
+
+.side-nav {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5e6e82;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  font-family: Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-basis: auto;
+  background-color: rgba(237,242,249,.96);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: .375rem;
+  background-image: linear-gradient(-45deg,rgba(0,160,255,.86),#0048a2),url(../img/generic/bg-navbar.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  position: relative;
+  display: inline-block!important;
+  transition: width .2s ease;
+  transition-property: width,box-shadow,-webkit-box-shadow;
+  margin-top: -.3125rem;
+  width: 14.5rem!important;
+  margin-left: 0!important;
+}
+
+
+
+#top-box {
+  background-color: black;
+}
+
+#mid-left {
+  background-color: green;
+
+}
+
+#mid-right {
+  background-color: red;
+
+}
+
