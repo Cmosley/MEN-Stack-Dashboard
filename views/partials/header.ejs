@@ -34,6 +34,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/auth/logout">Log Out</a>
             </li>
+            <li class="nav-item">
+              <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="">
+            </li>
             <% } else { %>
             <li class="nav-item">
               <a class="nav-link" href="/auth/google">Sign In</a>
@@ -43,5 +46,22 @@
           </ul>
         </div>
       </nav> 
+
+      <aside class='side-nav'>
+        <ul>
+            <li>
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/stores">Store</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/stores">Store</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/stores">Store</a>
+            </li>
+        </ul>
+      </aside>
 
 
