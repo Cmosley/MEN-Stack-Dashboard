@@ -19,7 +19,7 @@ const storeSchema = new Schema(
       required: true, 
     },
     storeid: Number, 
-    address: String,
+    street: String,
     city: String,
     state: String, 
     zip: Number,

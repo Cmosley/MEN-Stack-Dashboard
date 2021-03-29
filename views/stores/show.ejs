@@ -1,23 +1,26 @@
 <%- include('../partials/header') %>
-
-
+<h2> Store Details </h2>
 <div id="storeForm">
-  <form>
+  <form action="/stores" method="POST">
     <div class="form-group">
         <label for="formGroupName">Name</label>
-        <input type="text" class="form-control" id="formGroupName" placeholder="Enter Store Name">
+        <input type="text" name="name" class="form-control" id="formGroupName" placeholder="Enter Store Name">
         <label for="formGroupStoreId">Store Number</label>
-        <input type="number" class="form-control" id="formGroupStoreId" placeholder="Enter Store Number">
+        <input type="number" name="storeid" class="form-control" id="formGroupStoreId" placeholder="Enter Store Number">
+        
+        <label for="formGroupStreet">Street</label>
+        <input type="text" name="address" class="form-control" id="formGroupStreet" placeholder="Enter Street">
         <label for="formGroupCity">City</label>
-        <input type="text" class="form-control" id="formGroupCity" placeholder="Enter City">
+        <input type="text" name="city" class="form-control" id="formGroupCity" placeholder="Enter City">
         <label for="formGroupState">State</label>
-        <input type="text" class="form-control" id="formGroupState" placeholder="Enter State">
+        <input type="text" name="state" class="form-control" id="formGroupState" placeholder="Enter State">
         <label for="formGroupZip">Zip Code</label>
-        <input type="number" class="form-control" id="formGroupZip" placeholder="Enter Zip">
+        <input type="number" name="zip" class="form-control" id="formGroupZip" placeholder="Enter Zip">
+        
         <label for="formGroupWebsite">Website URL</label>
-        <input type="text" class="form-control" id="formGroupWebsite" placeholder="Enter Website URL">
+        <input type="text" name="website" class="form-control" id="formGroupWebsite" placeholder="Enter Website URL">
         <label for="formGroupStoreId">Google Analytics API</label>
-        <input type="text" class="form-control" id="formGroupStoreId" placeholder="Google Analytics API string">
+        <input type="text" name="google" class="form-control" id="formGroupStoreId" placeholder="Google Analytics API string">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Submit</button>
   </form>

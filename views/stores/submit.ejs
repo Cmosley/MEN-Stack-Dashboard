@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<h2> Submit Daily Sales </h2>
+<div id="storeForm">
+  <form action="/stores/daily" method="POST">
+    <div class="form-group">
+        <label for="formGroupDate">Date</label>
+        <input type="date" name="date" class="form-control" id="formGroupName" placeholder="Enter Date">
+        <label for="formGroupNetsales">Net Sales</label>
+        <input type="number" name="netsales" class="form-control" id="formGroupStoreId" placeholder="Enter Net Sales">
+        <label for="formGroupStreet">Car Count</label>
+        <input type="text" name="carcount" class="form-control" id="formGroupStreet" placeholder="Enter Car Count">
+        <label for="formGroupLabor">Labor %</label>
+        <input type="text" name="labor" class="form-control" id="formGroupCity" placeholder="Enter Labor %">
+        
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

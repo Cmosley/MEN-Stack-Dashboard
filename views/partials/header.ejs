@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/javascripts/scripts.js"></script>
+    <!-- <script defer src="/javascripts/scripts.js"></script> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -24,12 +24,6 @@
             <% if (user) { %>
             <li class="nav-item">
               <a class="nav-link" href="/store">Store</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Log Out</a>
-            </li>
-            <li class="nav-item">
-              <img id="avatarPhoto" height="50" src="<%= //user.avatar %>" alt="" />
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/auth/logout">Log Out</a>

@@ -1,9 +1,24 @@
 const Store = require("../models/store");
 
 module.exports = {
-    show
-    
+    show, 
+    create,
+    daily
 }
+
+function daily(req, res) {
+    Store.findById(req.params.id)
+    .then((store) => {
+      res.redirect('/')
+    })
+  }
+
+function create(req, res) {
+    Store.create(req.body)
+    .then(() => {
+      res.redirect('/stores')
+    })
+  }
 
 function show(req, res) {
     Store.findById(req.params.id,)
