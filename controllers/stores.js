@@ -1,6 +1,7 @@
 const Store = require("../models/store");
 
 module.exports = {
+    index, 
     show, 
     create,
     submitSales,
@@ -46,3 +47,8 @@ function show(req, res) {
           })
       })
   }
+
+  
+function index(req, res) {
+
+}
