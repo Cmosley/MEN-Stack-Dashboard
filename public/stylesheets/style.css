@@ -79,6 +79,7 @@ display: block;
   width: 14.5rem!important;
   margin-left: 2.5rem!important;
   height: 25.5rem!important;
+  float: left;
 }
 
 .side-nav > ul {
@@ -121,3 +122,5 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+
+
