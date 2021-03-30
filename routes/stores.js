@@ -3,7 +3,7 @@ const storesCtrl = require('../controllers/stores.js')
 
 
 //store 
-router.get('/index', isLoggedIn, storesCtrl.index)
+router.get('/dashboard', isLoggedIn, storesCtrl.index)
 router.get('/', isLoggedIn, storesCtrl.show)
 router.post('/', isLoggedIn, storesCtrl.create)
 // daily sales 

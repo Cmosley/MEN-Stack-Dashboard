@@ -48,7 +48,7 @@ function show(req, res) {
       })
   }
 
-  
-function index(req, res) {
 
+function index(req, res) {
+  res.render('stores/dashboard', {title: "Dashboard", user: req.user})
 }
