@@ -1,7 +1,10 @@
 <%- include('../partials/header') %>
 <h2> Submit Daily Sales </h2>
 <div id="storeForm">
-  <form action="/stores/daily" method="POST">
+  <form action="/stores/submit" method="POST">
+    <select name="test" id="">
+        <option value="<%= user."></option>
+    </select>
     <div class="form-group">
         <label for="formGroupDate">Date</label>
         <input type="date" name="date" class="form-control" id="formGroupName" placeholder="Enter Date">

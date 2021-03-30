@@ -3,14 +3,30 @@ const Store = require("../models/store");
 module.exports = {
     show, 
     create,
-    daily
+    submitSales,
+    submitForm,
 }
 
-function daily(req, res) {
+function submitForm(req, res) {
+    Store.findById(req.params.id,)
+    .then((stores) => {
+      res.render('stores/submit', {
+          title: 'Submit Daily Sales',   
+          stores, 
+          user: req.user
+          })
+      })
+  }
+
+function submitSales(req, res) {
     Store.findById(req.params.id)
     .then((store) => {
+    store.dailysales.push(req.body)
+    store.save()
+        .then(() => {
       res.redirect('/')
-    })
+      });
+    });
   }
 
 function create(req, res) {

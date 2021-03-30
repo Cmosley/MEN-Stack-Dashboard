@@ -2,10 +2,12 @@ const router = require("express").Router();
 const storesCtrl = require('../controllers/stores.js')
 
 
-
+//store 
 router.get('/', isLoggedIn, storesCtrl.show)
 router.post('/', isLoggedIn, storesCtrl.create)
-router.post('/:id/daily', isLoggedIn, storesCtrl.daily)
+// daily sales 
+router.get('/submit', isLoggedIn, storesCtrl.submitForm)
+router.post('/submit', isLoggedIn, storesCtrl.submitSales)
 
 
 
