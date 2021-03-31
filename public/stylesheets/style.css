@@ -82,7 +82,7 @@ display: block;
   transition: width .2s ease;
   transition-property: width,box-shadow,-webkit-box-shadow;
   margin-top: 1.125rem;
-  width: 14.5rem!important;
+  width: 12.5rem!important;
   margin-left: 2.5rem!important;
   height: 25.5rem!important;
   float: left;
@@ -91,6 +91,14 @@ display: block;
 .side-nav > ul {
   list-style-type: none;
   margin-top: 1rem;
+  justify-content: center;
+}
+
+.nav-space {
+  display: inline-flex;
+  justify-content: center;
+  padding-right: 1rem;
+  width: 2rem;
 }
 
 #dashboard {
