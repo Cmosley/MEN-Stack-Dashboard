@@ -1,15 +1,43 @@
 <%- include('../partials/header') %>
 
-
-<div class="container">
-<canvas id="myChart" width='600' height="400"></canvas>
+<div class="card mb-3" id="dashboard">
+  <div class="card-body rounded-soft bg-gradient" >
+    <div class="row text-white align-items-center no-gutters">
+      <div class="col">
+        <h4 class="text-white mb-0">Today $764.39</h4>
+        <p class="fs--1 font-weight-semi-bold">Yesterday <span class="opacity-50">$684.87</span></p>
+      </div>
+      <div class="col-auto d-none d-sm-block">  
+      </div>
+    </div>
+  
+    <div class="container" style="float: right;">
+    <canvas class="max-w-100 rounded" id="myChart" width="1600" height="375"></canvas>
+    </div>
+  </div>
 </div>
-<!-- 
-<div>Weather</div>
+
+<br>
+<div class="card deck">
+  <div class="card-body position-relative">
+    <h6>Weekly Sales<span class="badge badge-soft-warning rounded-capsule ml-2">-0.23%</span></h6>
+    <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">58.39k</div>
+  </div>
+  <div class="card-body position-relative">
+    <h6>Weekly Sales<span class="badge badge-soft-warning rounded-capsule ml-2">-0.23%</span></h6>
+    <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">58.39k</div>
+  </div>
+  <div class="card-body position-relative">
+    <h6>Weekly Sales<span class="badge badge-soft-warning rounded-capsule ml-2">-0.23%</span></h6>
+    <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">58.39k</div>
+  </div>
+</div>
+<!-- <div>Weather</div>
 
 <div>google</div>
 
-<div>Online/offline</div> -->
+<div>Online/offline</div>  -->
 
 
 <%- include('../partials/footer') %>
+
