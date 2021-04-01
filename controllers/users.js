@@ -1,6 +1,7 @@
 const User = require("../models/user");
+const Store = require("../models/store");
 
-// const Game = require("../models/game")
+
 
 module.exports = {
   index,
@@ -8,8 +9,18 @@ module.exports = {
   update,
 //   show, 
   addFriend, 
-  removeFriend
+  removeFriend, 
+  addToUser
 };
+
+function addToUser(req, res){
+  User.findById(req.params.id, function(err, store){
+    user.storeid.push(req.body.storeId)
+    user.save(function(err){
+      res.redirect(`/users/profile`)
+    })
+  })
+}
 
 function addFriend(req, res) {
   req.user.friends.push(req.params.id);
@@ -56,18 +67,19 @@ function index(req, res) {
   });
 }
 
-// function showProfile(req, res) {
-//   // Let's talk about why we're using User.findById.
-//   // Ordinarily, you won't see this, as we have access
-//   // to the user via req.user.  Because we're going to 
-//   // use .populate later on to find "friends," we're 
-//   // going to stub it up like this in advance.
-//   User.findById(req.user._id)
-//     .then((user) => {
-//       res.render("users/profile", { title: "Profile Page", user });
-//     });
-// }
 
-function showProfile(req, res) {
-  res.render("users/profile", {user: req.user, title: "User Profile"} )
+function showProfile(req, res){
+  
+  User.findById(req.user)
+  .populate('storeId').exec(function(err, user) {
+  user.storeId.forEach(store => {console.log(store.name) }); 
+    Store.find({_id: {$nin: user.storeId}}, function(err, stores) {
+      res.render('users/profile', {
+        title: 'User Profile',
+        user,
+        stores
+      })
+    })
+  })
 }
+

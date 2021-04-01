@@ -23,7 +23,6 @@ const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const storesRouter = require('./routes/stores')
 const usersRouter = require('./routes/users')
-const weatherRouter = require('./routes/weather')
 
 
 // view engine setup
@@ -58,7 +57,6 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/stores', storesRouter);
 app.use('/users', usersRouter);
-app.use('/weather', weatherRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -11,7 +11,7 @@ const userSchema = new Schema(
     avatar: String,
     googleId: String,
     role: String,
-    storeid: [{type: Schema.Types.ObjectId, ref: 'Store'}],
+    storeId: [{type: Schema.Types.ObjectId, ref: 'Store'}],
   },
   {
     timestamps: true,

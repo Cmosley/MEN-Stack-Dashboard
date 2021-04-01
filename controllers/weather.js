@@ -16,3 +16,12 @@
 // 	console.error(error);
 // });
 
+
+<form id="add-store-to-user" action="/users/<%= user._id%> method="POST">
+            <select name="storeId">
+              <%- stores.map(s => 
+                `<option value="${s._id}">${s.name}</option>`
+              ).join('') %>
+            </select>
+            <button type="submit">Add to Cast</button>
+          </form>

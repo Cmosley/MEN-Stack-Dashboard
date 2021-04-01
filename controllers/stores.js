@@ -33,10 +33,12 @@ function submitSales(req, res) {
   }
 
 function create(req, res) {
+    
     Store.create(req.body)
     .then(() => {
       res.redirect('/stores')
     })
+
   }
 
 function show(req, res) {
@@ -52,11 +54,12 @@ function show(req, res) {
 
 
 function index(req, res) {
+  Store.findById({storeid: req.user._id})
   axios
   .get(`https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_KEY}=Watauga,TX&aqi=no`)
-  .then((response) => {
+  .then((response, store) => {
       console.log(response.data);
-      res.render('stores/dashboard', {title: "Dashboard", user: req.user, results: response.data})
+      res.render('stores/dashboard', {title: "Dashboard", user: req.user, results: response.data, store})
   })
 }
 

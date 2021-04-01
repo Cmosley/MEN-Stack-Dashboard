@@ -18,25 +18,34 @@
 </div>
 
 <br>
-<div class="card deck">
-  <div class="card-body position-relative">
-    <h6>Weekly Sales<span class="badge badge-soft-warning rounded-capsule ml-2">-0.23%</span></h6>
-    <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">58.39k</div>
+<div class="card-deck">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Weekly Sales</h4>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">58.39k</div>
+      <p class="card-text">Current Temp <%= results.current.temp_f %></p>
+    </div>
   </div>
-  <div class="card-body position-relative">
-    <h6>Current Weather<span class="badge badge-soft-warning rounded-capsule ml-2">-0.23%</span></h6>
-    <div><%= results.current.temp_f %></div>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Website Status:</h4>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">ONLINE</div>
+      <p class="card-text"><%= store %></p>
+    </div>
   </div>
-  <div class="card-body position-relative">
-    <h6>Weekly Sales<span class="badge badge-soft-warning rounded-capsule ml-2">-0.23%</span></h6>
-    <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">58.39k</div>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Weather</h4><span class="badge badge-soft-warning rounded-capsule ml-2"><img src='http:<%=results.current.condition.icon %>'  ></span>
+      <p class="card-text">Current Temp:<span class="badge badge-soft-warning rounded-capsule ml-1 text-warning"><%= results.current.temp_f %></span></p>
+      <p class="card-text">Rain:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.precip_in %> in</span></p>
+      <p class="card-text">Wind:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.wind_dir %> @ <%= results.current.wind_mph %> mph</span></p>
+      <p class="card-text">Current Condition</p>
+      </div>
+      
+    </div>
   </div>
 </div>
-<!-- <div>Weather</div>
 
-<div>google</div>
-
-<div>Online/offline</div>  -->
 
 
 <%- include('../partials/footer') %>
