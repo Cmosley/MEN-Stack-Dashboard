@@ -1,8 +1,3 @@
-const axios = require("axios").default;
-
-module.exports = {
-    current
-}
 
 // const options = {
 //   method: 'GET',
@@ -21,11 +16,3 @@ module.exports = {
 // 	console.error(error);
 // });
 
-function current(req,res) {
-    axios
-    .get('https://api.weatherapi.com/v1/current.json?key=29eb114a7f1043dbb0c183446213103&q=Watauga,TX&aqi=no')
-    .then((response) => {
-        console.log(response.data.results);
-        res.render("stores/dashboard", {results: response.data.results})
-    })
-}

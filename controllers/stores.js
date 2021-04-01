@@ -1,4 +1,6 @@
 const Store = require("../models/store");
+const axios = require("axios").default;
+
 
 module.exports = {
     index, 
@@ -50,5 +52,11 @@ function show(req, res) {
 
 
 function index(req, res) {
-  res.render('stores/dashboard', {title: "Dashboard", user: req.user})
+  axios
+  .get(`https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_KEY}=Watauga,TX&aqi=no`)
+  .then((response) => {
+      console.log(response.data);
+      res.render('stores/dashboard', {title: "Dashboard", user: req.user, results: response.data})
+  })
 }
+
