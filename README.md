@@ -226,4 +226,4 @@ How you structure your presentation is ultimately up to you as long as you cover
 
 ### ERD Mockup
 
-![ERD Mockup](images/wireframe.png 'pre-development ERD mockup of database models')
+![ERD Mockup](images/wireframe.png)  'pre-development ERD mockup of database models')
