@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<div class="tasks">
+    <h1>Add a New Task</h1>
+    <form action='/tasks' method='POST'>
+        <label for='title'>Task: <input type='text' name='title' placeholder="Task Title" required=true></label><br><br>
+        <label for='done'>Done: <input type='checkbox' name='done' ></label>
+        <button type='submit' class="btn btn-primary">Add Task</button>
+
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

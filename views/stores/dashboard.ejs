@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
 
-<div class="card mb-3" id="dashboard">
-  <div class="card-body rounded-soft bg-gradient" >
+<div class="card " id="dashboard">
+  <div class="card-body rounded-soft bg-gradient shadow" >
     <div class="row text-white align-items-center no-gutters">
       <div class="col">
         <h4 class="text-white mb-0">Today $4215.25</h4>
@@ -12,7 +12,7 @@
       </div>
     </div>
   
-    <div class="container" style="float: right;">
+    <div class="container " style="float: right;">
     <canvas class="max-w-100 rounded" id="myChart" width="1600" height="375"></canvas>
     </div>
   </div>
@@ -20,31 +20,116 @@
 
 <br>
 <div class="card-deck">
+  <div class="card mb-3 shadow bg-white rounded" style="min-width: 12rem">
+    <div class="card-body position-relative">
+      <h6>Net Sales</h6>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-primary">58.39k</div><a class="font-weight-semi-bold fs--1 text-nowrap" href="#!">See all<span class="fas fa-angle-right ml-1" data-fa-transform="down-1"></span></a>
+    </div>
+  </div>
+  <div class="card mb-3 shadow bg-white rounded" style="min-width: 12rem">
+    <div class="bg-holder bg-card">
+    </div>
+    <!--/.bg-holder-->
+
+    <div class="card-body position-relative">
+      <h6>Car Count</h6>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-info">65</div>
+    </div>
+  </div>
+  <div class="card mb-3 shadow bg-white rounded" style="min-width: 12rem">
+    <div class="bg-holder bg-card" style="background-image:url(assets/img/illustrations/corner-3.png);">
+    </div>
+    <!--/.bg-holder-->
+
+    <div class="card-body position-relative">
+      <h6>Ticket Average</h6>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif">$80.5</div>
+    </div>
+  </div>
+</div>
+<div class="card-deck">
+  <div class="card mb-3 shadow bg-white rounded" style="min-width: 12rem">
+    <div class="bg-holder bg-card" style="background-image:url(assets/img/illustrations/corner-1.png);">
+    </div>
+    <!--/.bg-holder-->
+
+    <div class="card-body position-relative">
+      <h6>Labor</h6>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-danger">32%</div>
+    </div>
+  </div>
+  <div class="card mb-3 shadow bg-white rounded" style="min-width: 12rem">
+    <div class="bg-holder bg-card" style="background-image:url(assets/img/illustrations/corner-2.png);">
+    </div>
+    <!--/.bg-holder-->
+
+    <div class="card-body position-relative">
+      <h6>Weather</h6><span class=" ml-1"><img src='http:<%=results.current.condition.icon %>' ></span>
+      <p class="card-text">Current Temp:<span class="badge badge-soft-warning rounded-capsule ml-1 text-warning"><%= results.current.temp_f %>&deg;</span></p><p class="card-text">Rain:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.precip_in %> in</span></p>
+      <p class="card-text">Wind:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.wind_dir %> @ <%= results.current.wind_mph %> mph</span></p>
+    </div>
+  </div>
+  <div class="card mb-3 shadow bg-white rounded" style="min-width: 12rem">
+    <div class="bg-holder bg-card" style="background-image:url(assets/img/illustrations/corner-3.png);">
+    </div>
+    <!--/.bg-holder-->
+
+    <div class="card-body position-relative">
+      <h6>Website Status</h6>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-success">Online</div>
+    </div>
+  </div>
+</div>
+<!-- <div class="card-decks">
+<div class="card-deck" width='1200px'>
   <div class="card">
-    <div class="card-body">
+    <div class="card-body position-relative">
       <h4 class="card-title">Weekly Sales</h4>
       <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-primary">$40,000</div>
     </div>
   </div>
   <div class="card">
-    <div class="card-body">
+    <div class="card-body position-relative">
       <h4 class="card-title">Website Status:</h4>
       <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">ONLINE</div>
       <p class="card-text"><%= store %></p>
     </div>
   </div>
   <div class="card">
-    <div class="card-body">
-      <h4 class="card-title">Weather</h4>
-      <p class="card-text">Current Temp:<span class="badge badge-soft-warning rounded-capsule ml-1 text-warning"><%= results.current.temp_f %></span></p>
-      <p class="card-text">Rain:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.precip_in %> in</span></p>
-      <p class="card-text">Wind:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.wind_dir %> @ <%= results.current.wind_mph %> mph</span></p>
-      <p class="card-text">Current Condition</p><span class=" ml-1"><img src='http:<%=results.current.condition.icon %>' ></span>
-      </div>
-      
+    <div class="card-body position-relative">
+      <h4 class="card-title">Website Status:</h4>
+      <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">ONLINE</div>
+      <p class="card-text"><%= store %></p>
     </div>
   </div>
 </div>
+<div class="card-deck" >
+    <div class="card">
+      <div class="card-body position-relative">
+        <h4 class="card-title">Weather</h4>
+        <p class="card-text">Current Temp:<span class="badge badge-soft-warning rounded-capsule ml-1 text-warning"><%= results.current.temp_f %></span></p>
+        <p class="card-text">Rain:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.precip_in %> in</span></p>
+        <p class="card-text">Wind:<span class="badge badge-soft-warning rounded-capsule ml-1"><%= results.current.wind_dir %> @ <%= results.current.wind_mph %> mph</span></p>
+        <p class="card-text">Current Condition</p><span class=" ml-1"><img src='http:<%=results.current.condition.icon %>' ></span>
+      </div>
+    </div>
+      <div class="card">
+        <div class="card-body position-relative">
+          <h4 class="card-title">Website Status:</h4>
+          <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">ONLINE</div>
+          <p class="card-text"><%= store %></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body position-relative">
+          <h4 class="card-title">Website Status:</h4>
+          <div class="display-4 fs-4 mb-2 font-weight-normal text-sans-serif text-warning">ONLINE</div>
+          <p class="card-text"><%= store %></p>
+        </div>
+      </div>
+  </div>
+</div> -->
+
 
 <script>
 
