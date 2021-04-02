@@ -74,12 +74,12 @@
                     `<option value="${s._id}">${s.name}</option>`
                   ).join('') %>
                 </select>
-                <button type="submit">Add Store</button>
+                <button type="submit" class="btn btn-primary">Add Store</button>
               </form>
             </div>
             <br />
           </div>
-          <div class="form-row">
+          <!-- <div class="form-row">
             <div class="col-md-12">
               <label for="avatarUrl">Avatar Image URL:</label>
               <input
@@ -90,7 +90,7 @@
                 value="<%= user.avatar %>"
               />
             </div>
-          </div>
+          </div> -->
           <div class="form-row">
             <div class="col-md-12">
               <label for="bio">Role:</label>
@@ -102,7 +102,7 @@
               </select>
             </div>
           </div>
-          <button type="submit" class="btn btn-warning">Update</button>
+          <button type="submit" class="btn btn-primary">Update</button>
         </form>
       </div>
     </div>

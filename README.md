@@ -72,7 +72,7 @@ The first version of this app is currently uploaded. My goal was to establish a 
 # APIs
 
 ### Weather API
-Weather data was supplied by the [Weather API](https://www.weatherapi.com/docs/). I utilized the FREE plan for this API, that allows up to one million API calls a month. An API key was provided and has been neatly tucked away in my ...env file. 
+Weather data was supplied by the [Weather API](https://www.weatherapi.com/docs/). I utilized the FREE plan for this API, that allows up to one million API calls a month. An API key was provided and has been neatly tucked away in my .env file. 
 
 
 <a id='future-plans'></a>
@@ -80,7 +80,7 @@ Weather data was supplied by the [Weather API](https://www.weatherapi.com/docs/)
 # Future Plans
 
 * **My goal for this app is to turn it into a professional grade business dashboard that can be marketed and sold to Auto Repair professionals**
-* **In order for that to happen significant progress must be made in several areas:**
+  **In order for that to happen significant progress must be made in several areas:**
 * Dynamic data load from Customer supplied data 
 * Authentication control for individual stores to prevent data leakage
 * Robust KPI tracking system with goals, trends, and actionable intelligent feedback loop 
@@ -98,7 +98,7 @@ Weather data was supplied by the [Weather API](https://www.weatherapi.com/docs/)
 
 * Instructors and peers from the General Assembly SEIR-EC-2-22 cohort for collaboration in developing this app. While this app represents my own original work we gave each other assistance in developing our own versions thereof.
 
-* Formatting and structure of this `README.md` was largely adapted from cohort mate Marty Smith, (https://github.com/mhsmith321) 
+* Formatting and structure of this `README.md` was largely adapted from cohort mate Marty Smith's beautiful Unit 1 Project readme (https://github.com/mhsmith321) 
 
 
 
@@ -226,4 +226,4 @@ How you structure your presentation is ultimately up to you as long as you cover
 
 ### ERD Mockup
 
-![ERD Mockup](images/wireframe.png)  'pre-development ERD mockup of database models')
+![ERD Mockup](images/ERD.png 'pre-development ERD mockup of database models')

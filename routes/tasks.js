@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const taskCtrl=require('../controllers/tasks')
+const taskCtrl = require('../controllers/tasks')
 
 
 /* GET users listing. */

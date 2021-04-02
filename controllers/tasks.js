@@ -1,3 +1,4 @@
+const task = require('../models/task')
 const Task = require('../models/task')
 
 module.exports = {
@@ -6,7 +7,7 @@ module.exports = {
     create,
     show,
     update,
-    delete: deletetask,
+    delete: deleteTask,
     deleteAll
   }
 
@@ -17,7 +18,7 @@ function deleteAll(req, res) {
         })
   }  
 
-function deletetask(req, res) {
+function deleteTask(req, res) {
     Task.findByIdAndDelete(req.params.id)
         .then(() => {
             res.redirect('/tasks')
@@ -25,7 +26,7 @@ function deletetask(req, res) {
   }
  
 function update(req, res) {
-    req.body.read = !!req.body.read
+    req.body.done = !!req.body.done
     Task.findByIdAndUpdate(req.params.id,req.body)
     .then(task => {
         res.redirect('/tasks')
@@ -38,13 +39,12 @@ function show(req, res) {
         res.render('tasks/show', {
             task, 
             title: 'Tasks',
-            user: req.user,
         })
     })
   }
 
 function create(req, res) {
-    req.body.read = false;
+    req.body.done = false;
     Task.create(req.body)
     .then(() => {
         res.redirect('/tasks')

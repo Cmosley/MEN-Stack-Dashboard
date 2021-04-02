@@ -69,28 +69,3 @@ function index(req, res) {
       res.render('stores/dashboard', {title: "Dashboard", user: req.user, results: response.data, store,})
   })
 }
-
-// function checkStatus(req,res) {
-//   axios
-//   .get('https://www.watauakwikkar.com')
-//   .then((response) => {
-//   if ( response.status === 200 ) {
-//    console.log('WEBSITE ONLINE')
-//   } else {
-//    (console.log('WEBSITE OFFLINE'))
-//    return next();
-//   }
-//   })
-// }
-
-// function checkStatus(req,res) {
-//   axios
-//   .get('https://www.watauakwikkar.com')
-//   .catch(function (error) {
-//     if (error.response) {
-//       console.log(error.response.data);
-//       console.log(error.response.status);
-//       console.log(error.response.headers);
-//     }
-//   })
-// }

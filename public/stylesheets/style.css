@@ -159,6 +159,9 @@ h2 {
   justify-content: center;
 }
 
+.card-body {
+  display: inline;
+}
 
 
 

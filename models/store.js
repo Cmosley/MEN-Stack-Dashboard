@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// will use net sales and car count in schema to generate "ticket avg" on view
 const dailySchema = new Schema (
   {
     date: Date,

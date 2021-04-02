@@ -6,6 +6,7 @@ const taskSchema= new Schema ({
     done: {
         type:Boolean
     },
+    user: String,
 })
 
 module.exports=mongoose.model("Task", taskSchema)

@@ -4,7 +4,7 @@
 <h1>Update Task</h1>
     <form action='/tasks/<%= task._id%>?_method=PUT' method='POST'>
         <label for='title'>Task: <input type='text' name='title' default='New'  value='<%= task.title%>' autofocus required='true'></label><br><br>
-        <label for='read'>Read: <input type='checkbox' name='read'<%= task.read ? 'checked' : ''%>></label>
+        <label for='done'>Done: <input type='checkbox' name='done'<%= task.read ? 'checked' : ''%>></label>
         <button type='submit' class="btn btn-success">Update</button>
     </form>
 </div>

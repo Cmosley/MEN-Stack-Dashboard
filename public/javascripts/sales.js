@@ -7,7 +7,7 @@ var salesChart = new Chart(myChart, {
         labels: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         datasets: [{
             label: 'Net Sales: $',
-            data: [7500, 5000, 6200, 3800, 4500, 6000, 7000 ],
+            data: [7425, 5208, 6388, 3804, 4510, 6525, 3215 ],
             borderColor: '#fff',
             backgroundColor: "rgba(255,255,255,0.4)",
             
@@ -49,13 +49,5 @@ var salesChart = new Chart(myChart, {
 
 console.log(salesChart.data.datasets[0].data)
 let weeklySales = salesChart.data.datasets[0].data.reduce((a, b) => a + b, 0);
-console.log(weeklySum)
+console.log(weeklySales)
 
-// module.exports = {weeklySales}
-// module.exports = mongoose.model("Weekly", weeklySales);
-
-// module.exports = {
-//   weeklySales
-// }
-
-// export default weeklySales;
