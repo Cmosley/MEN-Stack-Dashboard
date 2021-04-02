@@ -214,16 +214,16 @@ How you structure your presentation is ultimately up to you as long as you cover
 
 ### Dashboard
 
-![Dashboard view](images/dashboard-view.png 'screenshot of dashboard')
+![Dashboard view](public/images/dashboard-view.png 'screenshot of dashboard')
 
 ### Create Store 
 
-![Create Store](images/store-create.png 'screenshot of store creation form')
+![Create Store](public/images/store-create.png 'screenshot of store creation form')
 
 ### Wireframe Mockup
 
-![Wireframe Mockup](images/wireframe.png 'pre-development wireframe mockup of app')
+![Wireframe Mockup](public/images/wireframe.png 'pre-development wireframe mockup of app')
 
 ### ERD Mockup
 
-![ERD Mockup](images/ERD.png 'pre-development ERD mockup of database models')
+![ERD Mockup](public/images/ERD.png 'pre-development ERD mockup of database models')
