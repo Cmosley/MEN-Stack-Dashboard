@@ -4,12 +4,13 @@
     
 
   <form action="/stores/submit" method="POST">
-    <select name="test" id="">
-        <option value="<%= user.storeid%>"</option>
-    </select>
+    
     <div class="form-group">
+
         <label for="formGroupDate">Date</label>
-        <input type="date" name="date" class="form-control" id="formGroupName" placeholder="Enter Date">
+        <input type="date" min="2020-01-01" max="2020-12-31" name="date" class="form-control" id="formGroupName" placeholder="Enter Date">
+
+
         <label for="formGroupNetsales">Net Sales</label>
         <input type="number" name="netsales" class="form-control" id="formGroupStoreId" placeholder="Enter Net Sales">
         <label for="formGroupStreet">Car Count</label>

@@ -1,4 +1,5 @@
 const Store = require("../models/store");
+const User = require("../models/user");
 const axios = require("axios").default;
 
 
@@ -21,16 +22,22 @@ function submitForm(req, res) {
       })
   }
 
+// 
+  
 function submitSales(req, res) {
-    Store.findById(req.params.id)
-    .then((store) => {
+  User.findById(req.user)
+  .populate('storeId').exec(function(err, user) {
+  Store.findById(user.storeId)
+  .then((store) => {
+    console.log(store)
     store.dailysales.push(req.body)
     store.save()
         .then(() => {
       res.redirect('/')
       });
     });
-  }
+  })
+}
 
 function create(req, res) {
     
@@ -59,7 +66,31 @@ function index(req, res) {
   .get(`https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_KEY}=Watauga,TX&aqi=no`)
   .then((response, store) => {
       console.log(response.data);
-      res.render('stores/dashboard', {title: "Dashboard", user: req.user, results: response.data, store})
+      res.render('stores/dashboard', {title: "Dashboard", user: req.user, results: response.data, store,})
   })
 }
 
+// function checkStatus(req,res) {
+//   axios
+//   .get('https://www.watauakwikkar.com')
+//   .then((response) => {
+//   if ( response.status === 200 ) {
+//    console.log('WEBSITE ONLINE')
+//   } else {
+//    (console.log('WEBSITE OFFLINE'))
+//    return next();
+//   }
+//   })
+// }
+
+// function checkStatus(req,res) {
+//   axios
+//   .get('https://www.watauakwikkar.com')
+//   .catch(function (error) {
+//     if (error.response) {
+//       console.log(error.response.data);
+//       console.log(error.response.status);
+//       console.log(error.response.headers);
+//     }
+//   })
+// }

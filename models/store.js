@@ -18,7 +18,7 @@ const storeSchema = new Schema(
       type: String,
       required: true, 
     },
-    storeid: Number, 
+    storeNum: Number, 
     street: String,
     city: String,
     state: String, 

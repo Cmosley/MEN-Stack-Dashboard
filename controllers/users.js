@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Store = require("../models/store");
+const { default: axios } = require("axios");
 
 
 
@@ -10,11 +11,13 @@ module.exports = {
 //   show, 
   addFriend, 
   removeFriend, 
-  addToUser
+  addToUser,
+  checkStatus
 };
 
 function addToUser(req, res){
   User.findById(req.params.id, function(err, store){
+    console.log(`params: ${req.params.id}`)
     user.storeid.push(req.body.storeId)
     user.save(function(err){
       res.redirect(`/users/profile`)
@@ -39,20 +42,6 @@ function removeFriend(req,res) {
   });
 }
 
-// function show(req, res) {
-//   User.findById(req.params.id,)
-//   .then((userInfo) => {
-//     Game.find({ collectedBy: userInfo._id })
-//     .then((games) => {
-//       res.render('users/show', {
-//         title: 'User Details', 
-//         userInfo, 
-//         user: req.user, 
-//         games
-//         })
-//     })
-//   })
-// }
 
 function update(req, res) {
   User.findByIdAndUpdate(req.user._id, req.body, { new: true })
@@ -69,10 +58,8 @@ function index(req, res) {
 
 
 function showProfile(req, res){
-  
   User.findById(req.user)
   .populate('storeId').exec(function(err, user) {
-  user.storeId.forEach(store => {console.log(store.name) }); 
     Store.find({_id: {$nin: user.storeId}}, function(err, stores) {
       res.render('users/profile', {
         title: 'User Profile',
@@ -83,3 +70,9 @@ function showProfile(req, res){
   })
 }
 
+
+function checkStatus(req, res) {
+  axios
+  .get(www.wataugakwikkar.com)
+  console.log(response)
+}
