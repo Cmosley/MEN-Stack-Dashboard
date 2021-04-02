@@ -10,15 +10,20 @@
       <li>
         <a href="/tasks/<%= t._id %>"><%= t.title %> - <%= t.done ? 'done' : 'not done' %></a>
       </li>
+      <% if(user.role === 'owner') { %>
       <form action="/tasks/<%= t._id %>?_method=DELETE" method="POST">
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
-    <% }) %>
+      <% } %>
+      <% }) %>
     <br>
     <br>
+    <% if(user.role === 'owner') { %>
     <form action="/tasks/?_method=DELETE" method="POST">
       <button type="submit" class="btn btn-danger">Delete All</button>
     </form>
+    <% } %>
+
     <br>
     <form action="/tasks/new">
     <button class="btn btn-primary">Add a New Task

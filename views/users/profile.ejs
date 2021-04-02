@@ -17,7 +17,8 @@
 			</a>
     </li>
     <% // This is the info for the 'update' tab %>
-    
+    <% if(user.role === 'owner') { %>
+
     <li class="nav-item">
       <a 
 				class="nav-link"
@@ -31,7 +32,8 @@
 				Update Info
 			</a>
     </li>
-    
+    <% } %>
+
   </ul>
   <div class="tab-content" id="myTabContent">
     <div 
@@ -96,9 +98,7 @@
               <label for="bio">Role:</label>
               <select name='role'>
                 <option value="Manager">Manager</option>
-              </select>
-              
-                <%= user.role %>
+                <option value="Manager">Owner</option>
               </select>
             </div>
           </div>

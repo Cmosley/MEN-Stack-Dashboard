@@ -1,4 +1,4 @@
-const task = require('../models/task')
+const User = require("../models/user");
 const Task = require('../models/task')
 
 module.exports = {
@@ -54,12 +54,13 @@ function create(req, res) {
 function index(req, res) {
     Task.find({})
         .then(tasks => res.render('tasks/index', { 
-            title: 'All Tasks', 
+            title: 'Task List', 
             tasks,
-            user: req.user 
+            user: req.user
         })
         )
   }
+
 
 function newtask(req, res) {
     res.render('tasks/new', {

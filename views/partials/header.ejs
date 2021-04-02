@@ -45,9 +45,12 @@
             <li>
               <a id='nav-a' class="nav-link" href="/stores/dashboard"><div class="nav-space"><i class="fas fa-tachometer-alt nav-space"></i></div>Dashboard</a>
             </li>
+            <% if(user.role === 'owner') { %>
             <li>
               <a id='nav-a' class="nav-link" href="/stores"><div class="nav-space"><i class="fas fa-store-alt nav-space"></i></div>Store</a>
             </li>
+            <% } %>
+
             <li>
               <a id='nav-a' class="nav-link" href="/stores/submit"><div class="nav-space"><i class="fas fa-file-invoice-dollar nav-space"></i></div>Submit Sales</a>
             </li>

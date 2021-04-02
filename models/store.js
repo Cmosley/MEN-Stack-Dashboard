@@ -26,7 +26,7 @@ const storeSchema = new Schema(
     google: String, 
     dailysales: [dailySchema],
     manager: [{type: Schema.Types.ObjectId, ref: 'User'}],
-    general: [{type: Schema.Types.ObjectId, ref: 'User'}],    
+    owner: [{type: Schema.Types.ObjectId, ref: 'User'}],    
   },
   {
     timestamps: true,
