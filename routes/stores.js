@@ -4,7 +4,6 @@ const storesCtrl = require('../controllers/stores.js')
 
 //store 
 router.get('/dashboard', isLoggedIn,  storesCtrl.index,)
-// router.get('/dashboard', isLoggedIn, storesCtrl.checkStatus )
 router.get('/', isLoggedIn, storesCtrl.show)
 router.post('/', isLoggedIn, storesCtrl.create)
 // daily sales 

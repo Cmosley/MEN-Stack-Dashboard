@@ -21,8 +21,6 @@ function submitForm(req, res) {
           })
       })
   }
-
-// 
   
 function submitSales(req, res) {
   User.findById(req.user)
@@ -58,7 +56,6 @@ function show(req, res) {
           })
       })
   }
-
 
 function index(req, res) {
   Store.findById({storeid: req.user._id})

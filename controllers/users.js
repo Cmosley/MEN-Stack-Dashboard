@@ -12,7 +12,6 @@ module.exports = {
   addFriend, 
   removeFriend, 
   addToUser,
-  checkStatus
 };
 
 function addToUser(req, res){
@@ -42,7 +41,6 @@ function removeFriend(req,res) {
   });
 }
 
-
 function update(req, res) {
   User.findByIdAndUpdate(req.user._id, req.body, { new: true })
 	.then(() => {
@@ -68,11 +66,4 @@ function showProfile(req, res){
       })
     })
   })
-}
-
-
-function checkStatus(req, res) {
-  axios
-  .get(www.wataugakwikkar.com)
-  console.log(response)
 }
