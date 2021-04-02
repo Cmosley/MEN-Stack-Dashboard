@@ -44,7 +44,6 @@ This app was made during General Assembly's Software Engineering Immersive progr
 The primary function of this early version is to accept user relayed sales input and display that data on the dashboard for easy viewing. 
 
 
-
 <a id='version-notes'></a>
 
 # Version Notes
@@ -65,8 +64,7 @@ The first version of this app is currently uploaded. My goal was to establish a 
 * Chart.js
 
 ### This app is hosted at:
-* [GitHub Repo](https://github.com/mhsmith321/GA-project-1-captcha)
-* [GitHub Hosted Site](https://mhsmith321.github.io/GA-project-1-captcha/)
+* [GitHub Repo](https://github.com/Cmosley/MEN-Stack-Dashboard)
 * [Heroku Hosted Site](https://auto-mastery.herokuapp.com/)
 
 <a id='apis'></a>
