@@ -1,3 +1,9 @@
+# ATTENTION: 
+
+DEVELOPMENT OF THIS APP HAS HALTED AND APP IS BEING REWRITTEN USING THE MERN STACK
+NEW REPO: https://github.com/Cmosley/Auto-Mastery
+
+
 # MEN-Stack-Dashboard
 Unit 2 MEN Stack CRUD App - Business Dashboard for Auto Repair company
 
